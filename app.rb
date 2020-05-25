@@ -5,8 +5,7 @@ class App < Sinatra::Base
 
   get '/reversename/:name' do
     @user_name = params[:name].to_s
-    backwards = @user_name.reverse
-    "#{backwards}"
+    erb :reversename
   end
 
   get '/square/:number' do
